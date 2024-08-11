@@ -8,11 +8,13 @@ body {
 
 header{
     background: linear-gradient(135deg, #0c1414, #132c1694, #0c1414);  
-     padding: 20px 0;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
 }
 .container {
     max-width: 100%;
@@ -23,30 +25,32 @@ header{
     display: flex;
     justify-content: center; 
     align-items: center;
+    flex-grow: 1;
     width: 100%;
     position: relative;
+    
 }
 .logo {
     height: 50px;
-    margin-left: 100px;
+    
     margin-right: 20px;
-    position: absolute;
-    left: 0;
+    
+    
+    
 }
-.navBox{
-    width: 400px;
+.navBox {
+    flex-grow: 1; 
+    max-width: 600px;
     height: 50px;
     color: aliceblue;
     background: linear-gradient(135deg, #0e2c2c, #071a30 );
     border-radius: 5px;
-    margin-top: 20px auto;
-    
-    font-size: 1em;
-
+    margin: 0  auto;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
+    
 }
 
 h1, h2, h3 {
@@ -86,11 +90,10 @@ p {
 }
 /*search*/
 .search-container{
-    margin-top: 20px;
-    position: absolute;
-    right: 150px;
+    
     display: flex;
     align-items: center;
+    margin-right: 20px;
     
 
 }
@@ -586,6 +589,38 @@ footer {
         margin-left: 10px;
         margin-right: 10px;
         padding: 30px 5px; /* Further adjust padding for smaller screens */
+    }
+}
+
+/* nav box */
+@media (max-width: 768px) {
+    .navBox {
+        max-width: 300px; /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin: 0 0 10px 0;
+    }
+
+    .search-container {
+        margin: 10px 0 0 0;
+    }
+
+    .navBox {
+        max-width: 100%; /* Full width on small screens */
+        margin: 0;
     }
 }
 
