@@ -19,7 +19,17 @@ header{
 .container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 2%;
+    margin-left: 8%;
+    
+    
+}
+
+.container-skill{
+    max-width: 100%;
+    margin: 0 auto;
+    margin-left: 8%;
+    margin-right: 8%;
+
 }
 .container-nav {
     display: flex;
@@ -178,6 +188,7 @@ nav a {
 
 }
 .hero-image-wrapper {
+    margin-right: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -361,6 +372,13 @@ nav a {
 
 
 /* Projects Section */
+.container-project{
+    max-width: 100%;
+    margin: 0 auto;
+    margin-left: 8%;
+    margin-right: 8%;
+
+}
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -427,7 +445,13 @@ nav a {
 
 
 /*hobby*/
+.container-hobbies{
+    max-width: 100%;
+    margin: 0 auto;
+    margin-left: 8%;
+    margin-right: 8%;
 
+}
 .hobby {
     margin-top: 50px;
     padding: 20px;
@@ -469,7 +493,13 @@ nav a {
     padding: 80px 0;
     text-align: center;
 }
+.container-contact{
+    max-width: 100%;
+    margin: 0 auto;
+    margin-left: 8%;
+    margin-right: 8%;
 
+}
 .contact_container {
     background: linear-gradient(135deg, #131b1b, #18203594, #0c1414);
     padding: 20px;
@@ -522,6 +552,7 @@ footer {
     background: linear-gradient(135deg, #0c1414, #132c1694, #0c1414);  
     padding: 20px 0;
     text-align: center;
+    
     margin-top: 20px;
 }
 
@@ -690,14 +721,19 @@ footer {
 }
 
 .cvcontainer {
+    background: linear-gradient(135deg, #364b5f, #41725e);
+    
     position: relative;
     text-align: center;
+    margin-right: 20%;
+    margin-left: 20%;
+    padding: 1%;
 }
 
 .download-btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 10px 20px ;
     background: linear-gradient(135deg, #b1c2d3, #87eec3);
     color: #181818;
     border-radius: 5px;
