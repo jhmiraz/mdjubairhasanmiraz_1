@@ -35,22 +35,24 @@ header{
     display: flex;
     justify-content: center; 
     align-items: center;
-    flex-grow: 1;
+    flex-grow: .6;
     width: 100%;
     position: relative;
     
 }
 .logo {
     height: 50px;
+    margin-left: 4%;
     
-    margin-right: 20px;
+    
     
     
     
 }
 .navBox {
-    flex-grow: 1; 
+    flex-grow: .1; 
     max-width: 600px;
+    
     height: 50px;
     color: aliceblue;
     background: linear-gradient(135deg, #0e2c2c, #071a30 );
@@ -62,6 +64,7 @@ header{
     gap: 40px;
     
 }
+
 
 h1, h2, h3 {
     font-weight: bold;
@@ -98,15 +101,22 @@ p {
 .dropdown.show .dropdown-menu {
     display: block;
 }
+.dropdown-toggle .fas {
+    color: #66FCF1; /* Set your desired color here */
+}
 /*search*/
 .search-container{
     
     display: flex;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 2%;
+    background: linear-gradient(135deg, #0e2c2c, #071a30);
+    
     
 
 }
+
+
 
 #search{
 
@@ -176,10 +186,18 @@ nav a {
 }
 
 /* Hero Section */
+
+.container-hero{
+    max-width: 100%;
+   
+    margin-left: 8%;
+    margin-right: 8%;
+
+}
 .hero{
     margin-top: 10px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
     background: linear-gradient(135deg, #102020, #051220);
     color: #fff;
     padding: 100px 0;
@@ -207,12 +225,12 @@ nav a {
 }
 
 .hero-image {
-    width: 110%;
-    height: 110%;
+    width: 140%;
+    height: 140%;
     object-fit: cover;
     position: absolute;
-    top: 45%;
-    left: 39.5%;
+    top: 60%;
+    left: 50.5%;
     transform: translate(-50%, -50%);
 }
 
@@ -245,7 +263,7 @@ nav a {
     padding: 10pX 20PX;
     font-size: 1.2EM;
     color: #181818;
-    background: linear-gradient(135deg, #338b66, #0c4986);
+    background: linear-gradient(135deg, #86c232, #93f51b);
     border-radius: 10px;
     text-decoration: none;
     transition: background-color 0.3s, transform 0.3s;
@@ -316,8 +334,8 @@ nav a {
 .about {
    
     margin-top: 10px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
     padding: 60px 0;
     background: linear-gradient(135deg, #102020, #051220 );
     
@@ -443,15 +461,16 @@ nav a {
     padding: 20px;
 }
 
+/* hobbies */
 
-/*hobby*/
+
 .container-hobbies{
     max-width: 100%;
     margin: 0 auto;
-    margin-left: 8%;
-    margin-right: 8%;
+    padding: 0 8%;
 
 }
+
 .hobby {
     margin-top: 50px;
     padding: 20px;
@@ -470,17 +489,47 @@ nav a {
 
 }
 .hobbies{
+    display: flex;
+    background: linear-gradient(135deg,#102020, #051220 );
+    flex-direction: column;
+    justify-content: space-between;
     padding: 20px;
-    background: linear-gradient(135deg, #102020, #051220);
-    border-radius: 10px;
+    border-radius: 5px;
     
 }
 
+
+
 .hobbies img{
-    width: 50px;  /* Set the width to a smaller size for icons */
-    height: 50px;  /* Set the height to a smaller size for icons */
+    margin: 0 auto;
+    display: block;
+    width: 40%;  
+    height: auto;  
     object-fit: contain;
     margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+    .hobby-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hobbies img {
+        width: 30%;  
+    }
+}
+
+@media (max-width: 480px) {
+    .hobby-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hobbies img {
+        width: 25%;  
+    }
+
+    .container-hobbies {
+        padding: 0 5%;
+    }
 }
 
 .hobbies ul{
@@ -723,11 +772,24 @@ footer {
 .cvcontainer {
     background: linear-gradient(135deg, #364b5f, #41725e);
     
-    position: relative;
-    text-align: center;
     margin-right: 20%;
     margin-left: 20%;
     padding: 1%;
+}
+
+@media (max-width: 768px) {
+    .cvcontainer {
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+}
+
+/* For small phones */
+@media (max-width: 480px) {
+    .cvcontainer {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
 }
 
 .download-btn {
@@ -739,6 +801,11 @@ footer {
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s;
+}
+.cvcontainer img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 .download-btn:hover {
