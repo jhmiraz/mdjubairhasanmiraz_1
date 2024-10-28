@@ -353,6 +353,11 @@ nav a {
     margin-bottom: 10px;
 }
 
+
+.about p{
+    
+    font-size: larger;
+}
 /* Skills Section */
 .skills {
     padding: 80px 0;
@@ -508,29 +513,7 @@ nav a {
     object-fit: contain;
     margin-bottom: 10px;
 }
-@media (max-width: 768px) {
-    .hobby-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
-    .hobbies img {
-        width: 30%;  
-    }
-}
-
-@media (max-width: 480px) {
-    .hobby-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hobbies img {
-        width: 25%;  
-    }
-
-    .container-hobbies {
-        padding: 0 5%;
-    }
-}
 
 .hobbies ul{
     text-align: left;
@@ -622,87 +605,10 @@ footer {
     font-size: 1.2em;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .skill-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-}
 
-@media (max-width: 480px) {
-    .hero-content {
-        text-align: left;
-    }
 
-    .hero-image img {
-        width: 100%;
-    }
-}
 
-/* Responsive Design for Welcome and About Sections */
-@media (max-width: 768px) {
-    .hero {
-        margin-left: 20px;
-        margin-right: 20px;
-        padding: 50px 10px; /* Adjust padding for smaller screens */
-    }
-    
-    .about {
-        margin-left: 20px;
-        margin-right: 20px;
-        padding: 40px 10px; /* Adjust padding for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        margin-left: 10px;
-        margin-right: 10px;
-        padding: 30px 5px; /* Further adjust padding for smaller screens */
-    }
-    
-    .about {
-        margin-left: 10px;
-        margin-right: 10px;
-        padding: 30px 5px; /* Further adjust padding for smaller screens */
-    }
-}
-
-/* nav box */
-@media (max-width: 768px) {
-    .navBox {
-        max-width: 300px; /* Adjust for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .container-nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .logo {
-        margin: 0 0 10px 0;
-    }
-
-    .search-container {
-        margin: 10px 0 0 0;
-    }
-
-    .navBox {
-        max-width: 100%; /* Full width on small screens */
-        margin: 0;
-    }
-}
 
 /* projects pages*/
 
@@ -811,3 +717,102 @@ footer {
 .download-btn:hover {
     background: linear-gradient(135deg, #376fa7, #5aaa89);
 }
+/* Media Query for screens 768px and below */
+@media (max-width: 768px) {
+    .container, .container-skill, .container-hero, .container-project, .container-contact, .aboutContainer, .container-hobbies {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+    .hero-content {
+        margin-left: 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content h3 {
+        font-size: 18px;
+    }
+
+    .navBox {
+        gap: 20px;
+        height: auto;
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hobby-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Media Query for screens 480px and below */
+@media (max-width: 480px) { 
+    .container, .container-skill, .container-hero, .container-project, .container-contact, .aboutContainer, .container-hobbies {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .circle {
+        width: 150px;
+        height: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-content h3 {
+        font-size: 16px;
+    }
+
+    .navBox {
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+    }
+
+    .skill-grid, .project-grid, .hobby-grid {
+        grid-template-columns: 1fr;
+    }
+
+    
+    .container .search-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container #search {
+        width: 90% !important;
+    padding: 8px !important;
+    }
+   
+}
+
