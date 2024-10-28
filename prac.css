@@ -776,7 +776,7 @@ footer {
         width: 1%; /* Take full width */
         margin-top: 10px; /* Add spacing between nav and search */
         display: flex;
-        margin-left: -250px;
+        margin-left: -180px;
         justify-content: center;
     }
     .logo {
