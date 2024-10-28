@@ -752,7 +752,8 @@ footer {
     }
 
     .skill-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for phones and tablets */
+        gap: 15px;
     }
 
     .project-grid {
