@@ -763,6 +763,18 @@ footer {
     .hobby-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .search-container {
+        display: flex;
+        flex-direction: column; /* Aligns vertically */
+        align-items: center;
+        width: 100%; /* Ensures it takes full width on smaller screens */
+        margin-top: 10px; /* Optional spacing */
+    }
+
+    #search {
+        width: 90%; /* Adjusts width to fit smaller screens */
+        padding: 10px;
+    }
 }
 
 /* Media Query for screens 480px and below */
