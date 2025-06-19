@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Project Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-deep-dark font-sans">
+    <header class="bg-gradient-to-r from-forest-green to-gold text-white sticky top-0 z-50 shadow-glow-green">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="logo">
+                <a href="index.html" aria-label="Home">
+                    <img src="jh.png" alt="Jubair Hasan Miraz Logo" class="h-12">
+                </a>
+            </div>
+            <nav class="hidden lg:flex space-x-4 items-center nav-links">
+                <a href="index.html#about" class="nav-link px-4 py-2 rounded-full hover:bg-deep-dark hover:text-gold transition duration-300 relative shadow-glow-green">About</a>
+                <a href="index.html#skills" class="nav-link px-4 py-2 rounded-full hover:bg-deep-dark hover:text-gold transition duration-300 relative shadow-glow-green">Skills</a>
+                <a href="index.html#projects" class="nav-link px-4 py-2 rounded-full hover:bg-deep-dark hover:text-gold transition duration-300 relative shadow-glow-green">Projects</a>
+                <a href="index.html#contact" class="nav-link px-4 py-2 rounded-full hover:bg-deep-dark hover:text-gold transition duration-300 relative shadow-glow-green">Contact</a>
+                <a href="cv.html" class="nav-link px-4 py-2 rounded-full hover:bg-deep-dark hover:text-gold transition duration-300 relative shadow-glow-green">CV</a>
+                <a href="index.html#hobby" class="nav-link px-4 py-2 rounded-full hover:bg-deep-dark hover:text-gold transition duration-300 relative shadow-glow-green">Hobby</a>
+            </nav>
+            <div class="lg:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div class="search-container relative w-32 md:w-48">
+                <input type="text" id="search" class="bg-deep-dark text-white rounded-full px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-gold shadow-glow-green" placeholder="Search..." aria-label="Search">
+                <div id="suggestions" class="suggestions-box hidden absolute bg-deep-dark text-white rounded shadow-glow-green mt-2 w-full"></div>
+            </div>
+        </div>
+        <nav id="mobile-menu" class="hidden lg:hidden bg-deep-dark text-white fixed inset-0 z-40 transform translate-x-full transition-transform duration-300">
+            <div class="flex justify-end p-4">
+                <button id="menu-close" class="text-white focus:outline-none" aria-label="Close menu">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div class="flex flex-col items-center space-y-6 mt-12">
+                <a href="index.html#about" class="nav-link text-2xl hover:text-gold transition duration-300">About</a>
+                <a href="index.html#skills" class="nav-link text-2xl hover:text-gold transition duration-300">Skills</a>
+                <a href="index.html#projects" class="nav-link text-2xl hover:text-gold transition duration-300">Projects</a>
+                <a href="index.html#contact" class="nav-link text-2xl hover:text-gold transition duration-300">Contact</a>
+                <a href="cv.html" class="nav-link text-2xl hover:text-gold transition duration-300">CV</a>
+                <a href="index.html#hobby" class="nav-link text-2xl hover:text-gold transition duration-300">Hobby</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-details py-16 bg-deep-dark text-white">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold text-center mb-8 text-gold">LearnHub</h1>
+                <p class="text-lg leading-relaxed max-w-3xl mx-auto mb-8">
+                    LearnHub is an innovative and interactive educational platform designed to facilitate learning across a wide array of subjects. It serves as a comprehensive resource for students, educators, and self-learners by providing access to popular and high-quality educational videos, articles, and quizzes. The primary goal of LearnHub is to create an engaging and effective learning environment where users can track their progress and enhance their knowledge in various subjects.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    <div class="image-card bg-dark-variant rounded-lg shadow-glow-green hover:shadow-glow-green-lg transition duration-300 overflow-hidden">
+                        <img src="p1.PNG" alt="LearnHub Preview 1" class="w-full h-48 object-cover transform hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="image-card bg-dark-variant rounded-lg shadow-glow-green hover:shadow-glow-green-lg transition duration-300 overflow-hidden">
+                        <img src="p11.PNG" alt="LearnHub Preview 2" class="w-full h-48 object-cover transform hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="image-card bg-dark-variant rounded-lg shadow-glow-green hover:shadow-glow-green-lg transition duration-300 overflow-hidden">
+                        <img src="p111.PNG" alt="LearnHub Preview 3" class="w-full h-48 object-cover transform hover:scale-105 transition duration-300">
+                    </div>
+                </div>
+                <h2 class="text-2xl font-semibold text-center mb-4 text-gold">Functionalities</h2>
+                <ul class="list-none max-w-2xl mx-auto bg-dark-variant p-6 rounded-lg shadow-glow-green">
+                    <li class="flex items-center mb-2"><span class="text-forest-green mr-2">•</span> Subject Selection</li>
+                    <li class="flex items-center mb-2"><span class="text-forest-green mr-2">•</span> User Authentication</li>
+                    <li class="flex items-center mb-2"><span class="text-forest-green mr-2">•</span> User Profile Management</li>
+                    <li class="flex items-center mb-2"><span class="text-forest-green mr-2">•</span> Progress Tracking</li>
+                    <li class="flex items-center"><span class="text-forest-green mr-2">•</span> Social Features</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gradient-to-r from-forest-green to-gold text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 Jubair Hasan Miraz. All rights reserved.</p>
+            <ul class="social-links flex justify-center mt-4 space-x-4">
+                <li><a href="https://www.facebook.com/yourprofile" target="_blank" class="hover:text-gold transition duration-300 shadow-glow-gold p-2 rounded-full" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.twitter.com/yourprofile" target="_blank" class="hover:text-gold transition duration-300 shadow-glow-gold p-2 rounded-full" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="hover:text-gold transition duration-300 shadow-glow-gold p-2 rounded-full" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.instagram.com/yourprofile" target="_blank" class="hover:text-gold transition duration-300 shadow-glow-gold p-2 rounded-full" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
