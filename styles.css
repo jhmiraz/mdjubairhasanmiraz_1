@@ -367,7 +367,54 @@ header {
     align-items: center;
     gap: 6px;
 }
+.contact form {
+    position: relative; /* For positioning success/error messages */
+}
 
+.contact .form-group input:focus,
+.contact .form-group textarea:focus {
+    transform: scale(1.01); /* Subtle scale effect on focus */
+    transition: transform 0.2s ease;
+}
+
+.contact .form-group label {
+    font-size: 0.9rem; /* Slightly smaller labels for better hierarchy */
+    font-weight: 500;
+}
+
+.contact .form-group input,
+.contact .form-group textarea {
+    border: 1px solid rgba(212, 160, 23, 0.2); /* Subtle gold border */
+}
+
+/* Success/Error Message Styling */
+.form-message {
+    display: none;
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.form-message.success {
+    background-color: rgba(26, 60, 52, 0.8); /* Forest green */
+    color: #D4A017; /* Gold */
+}
+
+.form-message.error {
+    background-color: rgba(220, 38, 38, 0.8); /* Red for error */
+    color: #fff;
+}
+
+/* Ensure honeypot field remains hidden */
+#_gotcha {
+    display: none !important; /* Extra assurance for honeypot */
+}
 
 /* Media Queries */
 @media (max-width: 1024px) {
@@ -392,6 +439,17 @@ header {
 }
 
 @media (max-width: 768px) {
+    .contact .form-group label {
+        font-size: 0.85rem;
+    }
+    .contact .form-group input,
+    .contact .form-group textarea {
+        font-size: 0.8rem;
+    }
+    .contact .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
     header .container {
         flex-direction: row;
         flex-wrap: wrap;
@@ -460,6 +518,17 @@ header {
 }
 
 @media (max-width: 480px) {
+    .contact .form-group label {
+        font-size: 0.8rem;
+    }
+    .contact .form-group input,
+    .contact .form-group textarea {
+        font-size: 0.75rem;
+    }
+    .contact .btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
 
     .hero-image-wrapper.circle{
         margin-top: -60px;

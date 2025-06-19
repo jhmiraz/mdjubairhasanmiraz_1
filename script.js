@@ -89,4 +89,50 @@ document.addEventListener('DOMContentLoaded', () => {
             suggestionsBox.classList.add('hidden');
         }
     });
+
+    // Contact Form Submission
+    // Contact Form Submission
+const contactForm = document.querySelector('#contact form');
+if (contactForm) {
+    // Create message element if it doesn't exist
+    let messageDiv = contactForm.querySelector('.form-message');
+    if (!messageDiv) {
+        messageDiv = document.createElement('div');
+        messageDiv.classList.add('form-message');
+        contactForm.appendChild(messageDiv);
+    }
+
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = e.target;
+        messageDiv.style.display = 'none'; // Hide previous messages
+        messageDiv.className = 'form-message'; // Reset classes
+
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        })
+        .then(response => {
+            if (response.ok) {
+                messageDiv.textContent = 'Message sent successfully!';
+                messageDiv.classList.add('success');
+                messageDiv.style.display = 'block';
+                form.reset();
+                setTimeout(() => {
+                    messageDiv.style.display = 'none';
+                }, 3000); // Hide after 3 seconds
+            } else {
+                messageDiv.textContent = 'Failed to send message. Please try again.';
+                messageDiv.classList.add('error');
+                messageDiv.style.display = 'block';
+            }
+        })
+        .catch(() => {
+            messageDiv.textContent = 'An error occurred. Please try again.';
+            messageDiv.classList.add('error');
+            messageDiv.style.display = 'block';
+        });
+    });
+}
 });
